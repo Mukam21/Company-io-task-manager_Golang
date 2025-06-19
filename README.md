@@ -128,3 +128,5 @@
 Автор:
 
 Golang-разработчик — Мукам Усманов
+
+Проект доступен на GitHub: https://github.com/Mukam21/Company-io-task-manager_Golang.git
