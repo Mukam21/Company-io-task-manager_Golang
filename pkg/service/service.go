@@ -102,3 +102,16 @@ func generateID() string {
 	}
 	return "task_" + string(b)
 }
+
+func TestOnlyNewTaskService(repo handlers.TaskHandlers, workers int) *taskService {
+	svc := &taskService{
+		repo:     repo,
+		taskChan: make(chan string, 100),
+		workers:  workers,
+	}
+	return svc
+}
+
+func (s *taskService) TaskChan() chan string {
+	return s.taskChan
+}
